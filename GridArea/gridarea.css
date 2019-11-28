@@ -1,0 +1,30 @@
+#hode {
+    grid-area: hode;
+    background-color: coral;
+}
+
+#skulder {
+    grid-area: skulder;
+    background-color: greenyellow;
+}
+
+#kne {
+    grid-area: kne;
+    background-color: blueviolet;
+}
+
+#toe {
+    grid-area: toe;
+    background-color: lightsalmon;
+}
+
+#kropp {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 2fr;
+    grid-template-rows: 20vh 30vh 30vh;
+  
+    grid-template-areas:
+      "hode hode . skulder"
+      "kne kne . skulder"
+      "toe . . .";
+}

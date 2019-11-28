@@ -1,15 +1,34 @@
 article {
-    background-color: antiquewhite;
+    background-color: lightskyblue;
 }
 article > h1 {
-    color: blue;
+    color:;
 }
 
 article h1 {
-    color: green;
+    color: ;
 }
 
 img {
     width: 200px;
     
+}
+
+td,th,
+table {
+    border: solid gray 1px;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+tbody tr:nth-child(odd) { 
+    background-color: lightgreen;
+}
+
+tbody tr:nth-child(even) { 
+    background-color: lightyellow;
+}
+
+thead {
+    background-color: lightcyan;
 }

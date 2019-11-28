@@ -1,94 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Datamaskinens oppbygning</title>
+    <title>Datamaskinens oppbygging</title>
     <link rel="stylesheet" href="data.css">
 </head>
+
 <body>
+    <script>
+    function hide(e) {
+        let t = document.getElementById("hide");
+        t.style.position = "relative";
+        let top = +(t.style.top.replace("px","")) + 20;
+        t.style.top = top + "px";
+    }
+      function helpme() {
+          // alert("HELP ME");
+          document.location.href = "https://vg.no";
+      }    
+    </script>
     <header>
-        <h1>Datamaskinens oppbygning og virkemåte</h1>
-        
+        <h1>Datamaskinens oppbygging og virkemåte</h1>
+        <button id="hide" onclick="helpme()" onmouseover="hide()">Helpme</button>
     </header>
     <main>
         <article>
             <h1>Prosessor</h1>
+            <p></p>
+            <h3>Sammenligning av 8-bit og 64-bit CPU</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Forskjell</th>
+                            <th>8-bit</th>
+                            <th>64-bit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Temperatur</td>
+                            <td>50 grader</td>
+                            <td> > 200 grader</td>
+                        </tr>
+                        <tr>
+                            <td>Antall transistorer</td>
+                            <td>3510</td>
+                            <td>1 750 000 000</td>
+                        </tr>
+                        <tr>
+                            <td>Transistor / mm</td>
+                            <td>10 / mm <sup>2</sup></td>
+                            <td>17.5 millioner / mm <sup>2</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Hastighet</td>
+                            <td>1000Hz</td>
+                            <td>2 000 000 000 Hz</td>
+                        </tr>
+                        <tr>
+                            <td>Pris</td>
+                            <td>kr 250</td>
+                            <td>kr 3500</td>
+                        </tr>
+                    </tbody>
+                </table>
             <div>
-                    <p>
-                        Prosessoren er hjernen i Datamaskinens.
-                        Hastigheten på en CPU er mellom 2-4 Ghz for nye datamaskiner.
-                        Det er prosessoren/CPU'en som utfører instruksjonene gitt i et dataprogram.
-                        Prosessoren har typisk to logiske bestanddeler: styreenheten og utførelsesenheten. 
-                        Det er CPU som har det øverste ansvaret for alt som skal utføres.
-                        Formen, designet og implementeringen av prosessorer har endret seg dramatisk siden de første eksemplarene, men deres grunnleggende operasjon er mye det samme.
-                    </p>
-                </div>
-            <p>
                 <h1>Intel</h1>
-            </p>
-                Amerikansk produsent av prosessorer.
-                Grunnlagt 1968 - laget Intel 4004 CPU, 4 bits cpu.
-                Dagens CPU er 64bit. 4 bit gir 2^4 som største tall = 16.
-                For 5-6 år sodfen var standard størrelse på 32bit, 2^32 = 4294967296.
-                Dagens CPU kan jobbe med tall på 2^64 = 18446744073709551616.
-                <div>
-                    <!--bilde av en 8086-->
-                    <img src="8060.jpg" alt="Intel">
-                </div>
-            <p>
+                <p>
+                    Amerikansk produsent av prosessorer.
+                    Grunnlagt 1968 - laget intel 4004 CPU, 4 bits cpu.
+                    Dagens CPUer er 64bit. 4 bit gir 2^4 som største tall = 16.
+                    For 5-6 år siden var standard størrlese 32 bit (tall på 4294967296)
+                    Dagens CPU kan jobbe med tall på 2^64 = 18446744073709552000.
+                    <div>
+                        <!-- bilde av en 8086 -->
+                        <img id="intel" src="8060.jpg" alt="8086 intel">
+                    </div>
+                </p>
                 <h1>AMD</h1>
-            </p>
-                AMD (Advanced Micro Devices) laget sin første CPU 8080 AM9080
-                (en klone av Intel 8080)
-                <div>
-                    <!--bilde av en AMD valgfritt-->
-                    <img src="AMD.png" alt="AMD">
-                </div>
-            <p>
+                <p>
+                    AMD (Advanced Micro Devices) laget sin første CPU 8080 AM9080
+                    (en klone av intel 8080).
+                    <div>
+                        <!-- bilde av en AMD valgfritt-->
+                        <img id="AMD" src="AMD.png" alt="AMD">
+                    </div>
+                </p>
                 <h1>ARM</h1>
-            <p>
-                Acorn (Advanced) RISC (Reduced Instruction Set Computer)
-                RISC CPUer har få og enkle instruksjoner (i motsetning til Intel).
-                Hver instruksjon skal ta minst mulig tid.
-                Kompliserte beregninger består av mange instruksjoner.
+                <p>
+                    Acorn (Advanced) RISC (Reduced Instruction Set Computer) Machine.
+                    RISC CPUer har få og enkle instruksjoner (i motsetning til Intel).
+                    Hver instruksjon skal ta minst mulig tid.
+                    Kompliserte beregninger består av mange instruksjoner.
 
-                Brukes i mobiler (nesten alle?)
-                <div>
-                    <!--bilde av en arm brukt i en mobil-->
-                    <img src="ARM.jpg" alt="ARM i mobil">
-                </div>
-            </p>
-        
+                    Brukes i mobiler (nesten alle?)
+                    <div>
+                        <!-- bilde av en arm brukt i en mobil-->
+                        <img id="ARM" src="ARM.jpg" alt="ARM">
+                    </div>
+
+                </p>
+                <p>
+                    Prosessoren er hjernen i datamaskinen.
+                    Hastigheten på en CPU er mellom 2 - 4 GHz for nye maskiner.
+
+
+                </p>
+            </div>
         </article>
         <article>
             <h1>RAM og ROM</h1>
-        <div>
-            <p>
-                RAM er en forkortelse som betyr Random Access Memory.
-                er en type lagringsplass brukt i datamaskiner, som gir tilgang til alle de lagrede dataene i tilfeldig rekkefølge.
-                Macbook Pro'en min har et minne på 8GB RAM.
-                Betegnelsen RAM brukes oftest om hovedhukommelse eller hovedminnet.
-            </p>
-        </div>
+            <div>
+                <p>
+                    RAM er en forkortelse som betyr
+                    Random Access Memory
+                </p>
+            </div>
         </article>
         <article>
             <h1>Lagring</h1>
             <div>
                 <p>
-                    Standard lagringsmedia i dag er SSD
-                    Tidligere (for noen få år siden) var HDD det mest brukte.
+                    Standard lagringsmedia i dag er SSD.
+                    Tidligere (for få år siden) var HDD det mest brukte.
                 </p>
             </div>
         </article>
         <article>
             <h1>Etc</h1>
         </article>
-
     </main>
     <footer>
-        Denne siden er laget med vscode
+        Denne sida er laga av KR med vscode
     </footer>
+    
+<p>
+    
+</p>
+
 </body>
+
 </html>
+

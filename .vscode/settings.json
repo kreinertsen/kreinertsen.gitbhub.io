@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "askForPassword": false,
+            "database": "bib",
+            "dialect": "PostgreSQL",
+            "name": "bibbi",
+            "port": 5432,
+            "server": "localhost",
+            "username": "kristianreinertsen"
+        }
+    ]
+}

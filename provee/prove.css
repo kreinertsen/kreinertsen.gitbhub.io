@@ -1,0 +1,14 @@
+h1 {
+    color: blue;
+    background-color: white;
+  }
+
+  h1:hover {
+      color: green;
+      background-color: gray;
+      transition: 0.7s;
+  }
+
+  p span {
+      color: blue;
+  }

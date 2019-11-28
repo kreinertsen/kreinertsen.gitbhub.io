@@ -1,0 +1,25 @@
+#a {
+    background-color: blue;
+    grid-area: a;
+}
+
+#b {
+    background-color:red;
+    grid-area: b;
+}
+
+#c {
+    background-color: yellow;
+    grid-area: c;
+}
+
+#main {
+    height: 600px;
+    width: 800px;
+    display: grid;
+    grid-template-columns: 2fr 8fr 3fr;
+    grid-template-areas:
+    "a . c"
+    "a . c"
+    
+
