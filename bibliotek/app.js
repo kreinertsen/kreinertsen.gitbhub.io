@@ -21,13 +21,19 @@ app.get("/", function (req, res) {
   res.send({ msg: "ok" });
 });
 
+// Define routes.
+app.get("/hei", function (req, res) {
+  res.send({ msg: "Velkommen" });
+});
+
 app.post("/runsql", function (req, res) {
   let data = req.body;
   runsql(res, data);
 });
 
 app.listen(3000, function () {
-  console.log(`Quiz server started on port ${PORT}`);
+  console.log(`Serveren min har startet på port ${PORT}
+  Du kan koble deg til på http://localhoast: ${PORT}`);
 });
 
 async function runsql(res, obj) {
